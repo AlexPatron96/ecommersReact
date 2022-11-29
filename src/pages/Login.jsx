@@ -13,7 +13,7 @@ const Login = () => {
     const navigate = useNavigate()
 
     const submit = (data) => {
-        alert('hola mundo' + data)
+        alert('hola mundo que tal' + data)
         console.log(data);
         axios.post("https://e-commerce-api.academlo.tech/api/v1/users/login/", data)
             .then(res => {
