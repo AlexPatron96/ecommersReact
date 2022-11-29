@@ -8,7 +8,6 @@ import Login from './pages/Login';
 import NavBar from './components/Navbar';
 import LoadingScreen from './components/LoadingScreen';
 import { useSelector } from 'react-redux';
-import ProtectedRoutes from './components/protectedRoutes';
 import CarShop from './pages/CarShop';
 
 
