@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;700&family=Montserrat:wght@400;600&display=swap');
+
+.title-h3{
+
+}
+
+.login{
+font-size: 40px;
+font-weight: 600;
+}
+.compenents-login {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prueba {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(248, 136, 0);
+}
+
+.justify-content-md-center {
+  position: relative;
+  width: 100%;
+}
+
+
+
+/*==============  HOME DELA PAGINA  =================*/
+.contHome {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+.form-control {
+
+  max-width: 600px;
+}
+
+.bodyhome {
+  display: flex;
+  flex-direction: row;
+}
+
+/*=====================================================*/
+
+.contCard-Product {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.row {
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 350px;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(237, 165, 165);
+  transition: 0.1s ease-out;
+  border-radius: 8px;
+
+}
+
+.btn-cardShop {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.positionCard {
+  position: absolute;
+  top: 80%;
+  left: 75%;
+}
+
+.card:hover {
+  transition: 0.1s ease-in;
+  border-bottom: 3px solid tomato;
+}
+
+.contLink {
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 220, 220);
+}
+
+/* .contLink:hover{
+  transition: 0.25s ease;
+  border-bottom: 2px solid tomato;
+} */
+
+.linkCard-ProductItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.card-img-top {
+  width: 175px;
+  height: 175px;
+  object-fit: contain;
+  position: relative;
+}
+
+.card-body {
+  padding: 1rem 2px;
+}
+
+.blackFriday {
+  background-color: black;
+  width: 80px;
+  height: 80px;
+  padding: 0.2rem;
+  border-radius: 50%;
+  color: azure;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 1px 1px 10px aliceblue;
+  line-height: 16px;
+}
+
+
+
+
+
+
+
+/*==============  ASIDE DELA PAGINA  ==================*/
+aside {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  width: 250px;
+  padding: 1rem;
+
+}
+
+aside>div {
+  border-right: 2px solid tomato;
+  padding: 1rem;
+}
+
+.colorList {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.colorList:hover {
+  color: tomato;
+}
+
+/*=====================================================*/
+/* .img-Carrousel{
+  width: 150px;
+  height: 300px;
+} */
+
+
+/*==============   ==================*/
+/* .slide {
+  max-width: 1000px;
+  height: 400px;
+  /* background-color: grey; */
+/* border: 2px solid tomato; */
+/* top: 200px;
+  margin: 0 auto;
+}
+*/
+
+.col-Product {
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+/*==================  BODY PAGE PRODUCT  ====================*/
+
+.cont-Body-producto {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+.imgAcordion {
+  grid-area: imgAcordion;
+}
+
+.descriptionPro {
+  grid-area: descriptionPro;
+}
+
+.shopFast {
+  grid-area: shopFast;
+}
+
+/*========   CARROUSEL  =======*/
+.cont-Carrousel {
+  position: relative;
+}
+
+.title-carrousel {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+}
+
+.title-carrousel::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  top: 15px;
+  left: 1%;
+  background-color: tomato;
+  border-radius: 10px;
+}
+
+.title-carrousel::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  top: 10px;
+  left: 69%;
+  background-color: tomato;
+  border-radius: 10px;
+}
+
+.carrousel-suggesProduct {
+  max-width: 600px;
+  height: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: relative;
+}
+
+.card-sugges {
+  height: 330px;
+}
+
+.text-card-sugges {
+  padding: 0;
+  text-align: center;
+}
+
+.carrousel-btPrev {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  border-radius: 50%;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.carrousel-btNext {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+/*===============================*/
+
+.col-Product.descriptionPro {
+  text-align: justify;
+}
+
+.product-h4 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.product-h5 {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+}
+
+.status {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: 2px solid grey;
+  top: 3px;
+  left: -20px;
+  background: red;
+}
+
+.Green {
+  background: green;
+}
+
+/*========   shop fast  =======*/
+.shop {
+  width: 250px;
+  min-height: 200px;
+  background: #F1EFEF;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.shop-h4 {
+  font-size: 15px;
+
+}
+
+.shop-h5 {
+  font-size: 12px;
+}
+
+.sello {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.contShopAction {
+  display: flex;
+  flex-direction: column;
+}
+
+.cant-productShop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.inputCant {
+  width: 50px;
+}
+
+.button-productShop {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.cads-productShop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*===============================*/
+.img-100 {
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
+  margin: 2.5rem 0;
+}
+
+/* .cont-img {} */
+
+
+/*=====================================================*/
+
+
+/* .row-Product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'imgAcordion descriptionPro shopFast';
+  margin: 1rem auto;
+  justify-items: center;
+  justify-content: center; 
+}*/
+
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {}

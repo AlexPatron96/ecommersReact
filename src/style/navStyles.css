@@ -1,0 +1,11 @@
+
+/*==============  NAVBAR DELA PAGINA  =================*/
+
+
+.nav-link {
+    color: aliceblue;
+}
+
+.nav-link:hover {
+    text-shadow: 2px 4px 10px rgb(19, 1, 1);
+}
