@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;700&family=Montserrat:wght@400;600&display=swap');
 
-.title-h3{
+.title-h3 {}
 
+.login {
+  font-size: 40px;
+  font-weight: 600;
 }
 
-.login{
-font-size: 40px;
-font-weight: 600;
-}
 .compenents-login {
   position: relative;
   padding: 1rem;
@@ -207,6 +206,10 @@ aside>div {
 .col-Product {
   margin: 1.5rem 0;
   text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*==================  BODY PAGE PRODUCT  ====================*/

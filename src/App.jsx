@@ -9,6 +9,7 @@ import NavBar from './components/Navbar';
 import LoadingScreen from './components/LoadingScreen';
 import { useSelector } from 'react-redux';
 import CarShop from './pages/CarShop';
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 
 function App() {
@@ -24,9 +25,13 @@ function App() {
         <Route path="/product/:id" element={<Product />} />
         <Route path="/login" element={<Login />} />
         <Route path="/car" element={<CarShop />} />
-        <Route path="/purchases" element={<Purchases />} />
 
-        
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/purchases" element={<Purchases />} />
+        </Route>
+ 
+
+
 
       </Routes>
     </HashRouter>

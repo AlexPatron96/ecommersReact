@@ -35,7 +35,7 @@ const Home = () => {
         dispatch(filterHeadLineThunk(inputSearch))
         alert('click ' + inputSearch)
     }
-    console.log(product);
+    // console.log(product);
     return (
         <div className='contHome'>
             {" - "}
