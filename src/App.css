@@ -74,7 +74,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 225px;
   height: 350px;
   padding: 0.5rem;
   border-bottom: 1px solid rgb(237, 165, 165);
@@ -429,6 +429,16 @@ aside>div {
   justify-items: center;
   justify-content: center; 
 }*/
+.listProd-Purchases {
+  display: flex;
+  justify-content: space-between;
+  border: 4px solid rgb(237, 165, 165);
+}
+
+.list-group-item {
+  border-radius: 20px;
+}
+
 
 /* Para 320px */
 @media only screen and (max-width: 340px) and (min-width: 5px) {}

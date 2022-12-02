@@ -16,6 +16,7 @@ import Col from 'react-bootstrap/Col';
 /*imagenes de prueba*/
 import svgSello from '../img/sello.svg'
 import tarjetas from '../img/sellos_ec_1.webp'
+import { addProductCartThunk } from '../store/slices/cartShop.slice';
 
 
 
@@ -26,35 +27,52 @@ const Product = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const navigate = useNavigate();
+    const [ inputProdCuant , setInputProdCuant] = useState('')
     const productList = useSelector(state => state.products)
 
     const productFound = productList?.find(prodItem => prodItem.id === Number(id))
-    // console.log(productFound);
+    console.log(productFound);
 
     const suggestions = productList?.filter(sugges => sugges.category.id === productFound?.category.id)
 
     const suggestionsListReset = suggestions?.filter(sugges => sugges.title !== productFound?.title)
-    console.log(suggestionsListReset);
+    // console.log(suggestionsListReset);
 
     const [productCarrousel, setProductCarrousel] = useState([...suggestionsListReset].splice(0, 4));
 
-
+    console.log(suggestionsListReset);
+    console.log(productCarrousel);
 
     useEffect(() => {
+        console.log('se vuelve a ejecutar el useEffect');
         if (productFound === undefined) {
             navigate("/")
             console.log(productFound);
         } else {
             dispatch(getProductsThunk())
+        }
+    }, [])
 
+
+    const setProduct = () => {
+        alert(' seteando la pag Product')
+    }
+
+
+    const addProductCartButton = () => {
+
+        const newProd = {
+            "id":productFound.id,
+            "quantity": inputProdCuant
         }
 
-    }, [])
+        dispatch(addProductCartThunk(newProd))
+    }
+
 
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
-
         setIndex(selectedIndex);
         const firstIndex = selectedIndex * 2
         console.log('selectedindex 57: ' + selectedIndex);
@@ -73,7 +91,7 @@ const Product = () => {
             <Card key={suggCarrusel.id} className="card-sugges">
                 <div className='contLink'>
                     <h2>s</h2>
-                    <Link to={`/product/${suggCarrusel.id}`} className='linkCard-suggCarrusel'>
+                    <Link to={`/product/${suggCarrusel.id}`} className='linkCard-suggCarrusel' onClick={setProduct}>
                         <Card.Img variant="top" src={suggCarrusel.productImgs[0]} />
                         <Card.Body className='text-card-sugges'>
                             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{suggCarrusel?.title}</Tooltip>}>
@@ -100,7 +118,7 @@ const Product = () => {
     })
 
 
-    console.log(Math.ceil(suggestions.length / 2));
+    // console.log(Math.ceil(suggestions.length / 2));
     const allCarrouselPage = carrouselPage.map(page => {
         return (
             <div className='carrousel-suggesProduct' key={page}>
@@ -110,6 +128,9 @@ const Product = () => {
             </div>
         )
     })
+
+
+
 
     return (
         <div>
@@ -191,14 +212,14 @@ const Product = () => {
                                             <div className='cant-productShop'>
                                                 <div>
                                                     <h5 className='shop-h5'>Cantidad:</h5>
-                                                    <input className='inputCant' type="number" name="" id="" />
+                                                    <input className='inputCant' type="number" name="" id="" onChange={e => setInputProdCuant(e.target.value)} value={inputProdCuant}/>
                                                 </div>
                                                 <div className='cads-productShop'>
                                                     <img className='imgcads-productShop' src={tarjetas} alt="" />
                                                 </div>
                                             </div>
                                             <div className='button-productShop'>
-                                                <Button variant='danger'>Comprar <i className='bx bx-shopping-bag' ></i></Button>
+                                                <Button variant='danger' onClick={() => addProductCartButton()}>Comprar <i className='bx bx-shopping-bag' ></i></Button>
                                                 <Button variant='outline-danger'>Agregar al carrito</Button>
                                             </div>
                                         </div>

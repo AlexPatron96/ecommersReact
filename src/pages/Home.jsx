@@ -38,7 +38,6 @@ const Home = () => {
     // console.log(product);
     return (
         <div className='contHome'>
-            {" - "}
             <InputGroup className="mb-3">
                 <Form.Control
                     placeholder="Search for the product you need"
@@ -117,7 +116,7 @@ const Home = () => {
                             </aside>
                         </Col>
 
-                        <Col xs={9}>
+                        <Col xs={8}>
                             <div className='contCard-Product'>
                                 {product?.map(productItem => (
 
