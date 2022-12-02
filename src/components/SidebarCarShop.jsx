@@ -47,6 +47,11 @@ const SidebarCarShop = ({ show, handleClose }) => {
                     </ListGroup>
                     
                 </Offcanvas.Body>
+                <ListGroup>
+                    <ListGroup.Item>
+                        <h4>Total:</h4>
+                    </ListGroup.Item>
+                </ListGroup>
                 <Button variant="danger" onClick={() => dispatch(checkoutShopThunk())}>CHECKOUT</Button>{' '}
             </Offcanvas>
         </div>
